@@ -9,7 +9,6 @@ on:
         required: true
         type: string
         
-      
   pull_request:
     branches: [ "main" ]
     inputs:

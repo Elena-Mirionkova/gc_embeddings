@@ -8,6 +8,7 @@ on:
         description: "Ключ авторизации для получения токена"
         required: true
         type: string
+        
       
   pull_request:
     branches: [ "main" ]

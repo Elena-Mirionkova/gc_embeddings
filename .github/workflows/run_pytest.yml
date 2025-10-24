@@ -41,7 +41,11 @@ jobs:
       env:
         AUTH_KEY: ${{ secrets.AUTH_KEY_SECRET }}
       run: |
-        pytest --alluredir=./allure-results
+        pytest --alluredir=./allure_results
+
+    - name: Generate Allure report
+      run: |
+        allure generate -o ./allure-report --clean ./allure_results
 
     - name: Upload report as artifact
       uses: actions/upload-artifact@v4

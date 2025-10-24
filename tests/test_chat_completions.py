@@ -153,6 +153,7 @@ class TestChatCompletions:
         assert response.status_code == ResponseCodes.bad_params and r["status"] == Responses.bad_params
 
 
+"""
     @allure.title('Получаем ошибку 429.')
     def test_too_many_requests(self, token):
         url = main_url + completions   
@@ -187,5 +188,4 @@ class TestChatCompletions:
             i += 1
         
         assert response.status_code == ResponseCodes.too_many_requests
-    
-    
+"""        

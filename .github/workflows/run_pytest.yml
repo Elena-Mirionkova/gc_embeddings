@@ -39,6 +39,6 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pytest
       env:
-        AUTH_KEY: ${{ inputs.auth_key }}
+        AUTH_KEY: ${{ secrets.AUTH_KEY_SECRET }}
       run: |
         pytest

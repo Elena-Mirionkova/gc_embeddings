@@ -41,4 +41,4 @@ jobs:
       env:
         AUTH_KEY: ${{ secrets.AUTH_KEY_SECRET }}
       run: |
-        pytest
+        pytest --alluredir=./allure-results

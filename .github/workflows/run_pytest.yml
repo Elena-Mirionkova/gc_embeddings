@@ -50,7 +50,7 @@ jobs:
     - name: Generate Allure report
       run: |
         allure generate -c -o ./allure-report ./allure_results
-
+        
     - name: Upload report as artifact
       uses: actions/upload-artifact@v4
       with:

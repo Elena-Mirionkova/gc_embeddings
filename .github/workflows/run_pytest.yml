@@ -37,6 +37,10 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Install Allure CLI
+      run: npm install -g allure-commandline
+  
     - name: Test with pytest
       env:
         AUTH_KEY: ${{ secrets.AUTH_KEY_SECRET }}
